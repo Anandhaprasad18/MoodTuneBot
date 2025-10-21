@@ -1,0 +1,169 @@
+{
+  "happy": [
+    {
+      "title": "Vaathi Coming",
+      "artist": "Anirudh Ravichander",
+      "url": "https://open.spotify.com/track/2BcPFQ7nrtUObgAs72xaac"
+    },
+    {
+      "title": "Arabic Kuthu",
+      "artist": "Anirudh Ravichander",
+      "url": "https://open.spotify.com/track/6yvxu91deFKt3X1QoV6qMv"
+    },
+    {
+      "title": "Rowdy Baby",
+      "artist": "Yuvan Shankar Raja",
+      "url": "https://open.spotify.com/track/2DIZaYKZQgykijd9g4SVd2"
+    },
+    {
+      "title": "Chinna Chinna Aasai",
+      "artist": "A.R. Rahman",
+      "url": "https://open.spotify.com/track/38QruZFq0CAtw3j4SuTKSc"
+    },
+    {
+      "title": "Jolly O Gymkhana",
+      "artist": "Anirudh Ravichander",
+      "url": "https://open.spotify.com/track/6lpbzOMBOYHRsp6WEMvRvn"
+    }
+  ],
+
+  "sad": [
+    {
+      "title": "Ilaya Nila",
+      "artist": "S. P. Balasubrahmanyam",
+      "url": "https://open.spotify.com/track/42NWXVKyoMuu3lTJicyZCn"
+    },
+    {
+      "title": "Thenpandi Seemayile",
+      "artist": "Ilaiyaraaja",
+      "url": "https://open.spotify.com/track/0aFL0ax8U5tGr5yyhFpqYc"
+    },
+    {
+      "title": "En Iniya Pon Nilave",
+      "artist": "K. J. Yesudas",
+      "url": "https://open.spotify.com/track/6xpg8KzseMKZpxT3aCUvIl"
+    },
+    {
+      "title": "Azhagu Malar Aada",
+      "artist": "S. P. Balasubrahmanyam",
+      "url": "https://open.spotify.com/track/4CUOvC2KsOLIU37SaoWyN2"
+    },
+    {
+      "title": "Oru Jeevan Azhaithathu",
+      "artist": "S. P. Balasubrahmanyam",
+      "url": "https://open.spotify.com/track/5Z7VmdDa17RSCn4YwV3WI8"
+    }
+  ],
+
+  "angry": [
+    {
+      "title": "Porkkalam",
+      "artist": "Yuvan Shankar Raja",
+      "url": "https://open.spotify.com/track/0LavemwotrThdjjJAkdFth"
+    },
+    {
+      "title": "Ding Dong",
+      "artist": "Santhosh Narayanan",
+      "url": "https://open.spotify.com/track/1FxNIgIbneG2dhY9CkBIFW"
+    },
+    {
+      "title": "Dhushta",
+      "artist": "Santhosh Narayanan",
+      "url": "https://open.spotify.com/track/0isq7Db3QPV3NaSLoiwYGa"
+    },
+    {
+      "title": "Vada Chennai Theme",
+      "artist": "Santhosh Narayanan",
+      "url": "https://open.spotify.com/track/4OfHIfMJLhPiN32Y10yJG4"
+    },
+    {
+      "title": "Na Raja",
+      "artist": "Nivas K Prasanna",
+      "url": "https://open.spotify.com/track/4ooZIh4TsQIMWZ8Vxohqda"
+    }
+  ],
+
+  "neutral": [
+    {
+      "title": "Ilamai Ennum Poongatru",
+      "artist": "Ilaiyaraaja",
+      "url": "https://open.spotify.com/track/38QruZFq0CAtw3j4SuTKSc"
+    },
+    {
+      "title": "Thalattudhe Vaanam",
+      "artist": "Ilaiyaraaja",
+      "url": "https://open.spotify.com/track/5Z7VmdDa17RSCn4YwV3WI8"
+    },
+    {
+      "title": "Senthazham Poovil",
+      "artist": "Ilaiyaraaja",
+      "url": "https://open.spotify.com/track/6ON6qSpG91sTBtOvGF5hLu"
+    },
+    {
+      "title": "Solai Poovil Aadum",
+      "artist": "Ilaiyaraaja",
+      "url": "https://open.spotify.com/track/3B68QbT5tsU7I2RqcEdgdL"
+    },
+    {
+      "title": "Chinna Kannan Azhaikiraan",
+      "artist": "Ilaiyaraaja",
+      "url": "https://open.spotify.com/track/0YsBr7XFEapZmYeU5a9IFz"
+    }
+  ],
+
+  "motivated": [
+    {
+      "title": "Ella Pugazhum",
+      "artist": "A.R. Rahman",
+      "url": "https://open.spotify.com/track/3Tu8zZ9osqEy3OJriNlZNc"
+    },
+    {
+      "title": "Thala Kodhum",
+      "artist": "Sean Roldan",
+      "url": "https://open.spotify.com/track/0N2Ft2hTHrdh21MWrRq6Cr"
+    },
+    {
+      "title": "Mun Sellada",
+      "artist": "Yuvan Shankar Raja",
+      "url": "https://open.spotify.com/track/68SQB9JEA3YKYPFejBOH2S"
+    },
+    {
+      "title": "Lelakku Lelakku",
+      "artist": "Hiphop Tamizha",
+      "url": "https://open.spotify.com/track/2sek8FYhRAwC8Ze732DlfO"
+    },
+    {
+      "title": "Ullala",
+      "artist": "Anirudh Ravichander",
+      "url": "https://open.spotify.com/track/2LLZkWMReCWhgTrHuRh6dV"
+    }
+  ],
+
+  "night": [
+    {
+      "title": "Kalasala Kalasala",
+      "artist": "Anirudh Ravichander",
+      "url": "https://open.spotify.com/track/34cVXueLfZorFVxgNunn78"
+    },
+    {
+      "title": "Arabu Naade",
+      "artist": "Harish Raghavendra",
+      "url": "https://open.spotify.com/track/3GDkmd9j8P8DH5QKAZyktp"
+    },
+    {
+      "title": "Vaadi Vaadi",
+      "artist": "Vijay Antony",
+      "url": "https://open.spotify.com/track/7AmfSO5DbLqUU5WC8TDYfc"
+    },
+    {
+      "title": "Jingunamani",
+      "artist": "Ranjith",
+      "url": "https://open.spotify.com/track/0YsBr7XFEapZmYeU5a9IFz"
+    },
+    {
+      "title": "Kodana Kodi",
+      "artist": "Ranina Reddy",
+      "url": "https://open.spotify.com/track/4cEjPFp9pzj2Ij6NjV3Vhw"
+    }
+  ]
+}
