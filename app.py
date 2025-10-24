@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify, session
 import json, random
 from emotion_model import detect_emotion
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -66,7 +67,5 @@ def chat():
         "link": None
     })
 
-if __name__ == '__main__':
-    import os
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
