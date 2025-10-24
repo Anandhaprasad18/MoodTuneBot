@@ -1,5 +1,9 @@
-Flask==3.0.3
-transformers==4.44.2
-torch>=2.0.0
-sentencepiece
-accelerate
+flask
+text2emotion
+requests
+jinja2
+itsdangerous
+werkzeug
+numpy
+transformers
+torch
