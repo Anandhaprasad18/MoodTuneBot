@@ -2,15 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MoodTuneBot</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+  <div class="background-gfx">
+    <svg class="wave left" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#4d4dff" fill-opacity="0.1" d="M0,160L48,170.7C96,181,192,203,288,186.7C384,171,480,117,576,101.3C672,85,768,107,864,138.7C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+    <svg class="wave right" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#4d4dff" fill-opacity="0.1" d="M0,160L48,170.7C96,181,192,203,288,186.7C384,171,480,117,576,101.3C672,85,768,107,864,138.7C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+    <div class="particles"></div>
+  </div>
   <div class="chat-container">
     <h1>MoodTuneBot 🎧</h1>
     <div id="chat-box"></div>
-    <input type="text" id="user-input" placeholder="Type your message...">
-    <button onclick="sendMessage()">Send</button>
+    <div class="input-container">
+      <input type="text" id="user-input" placeholder="What's your mood today?">
+      <button onclick="sendMessage()">Send</button>
+    </div>
   </div>
   <script src="/static/script.js"></script>
 </body>
