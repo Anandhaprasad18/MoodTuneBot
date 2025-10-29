@@ -4,7 +4,7 @@ from emotion_model import detect_emotion
 import os
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = os.environ.get("SECRET_KEY", "your_secret_key")
 
 with open('dataset.json', 'r', encoding='utf-8') as f:
     music_data = json.load(f)
@@ -68,4 +68,5 @@ def chat():
     })
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 7860)))
+
