@@ -1,25 +1,27 @@
-name: Push to HF Space
+name: Push to Hugging Face Space
 
 on:
   push:
-    branches: [ main ]   # Runs whenever you push to main
+    branches:
+      - main
 
 jobs:
   push-space:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # ✅ Fix shallow clone issue
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions@github.com"
 
       - name: Push to Hugging Face Space
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}  # ✅ Your Hugging Face token stored in GitHub secrets
         run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-
-          # Add remote if not exists
-          git remote add hf https://huggingface.co/spaces/heisenberg-walterwhite/musicbot || true
-
-          # Force push main branch to HF Space
-          git push https://__token__:${HF_TOKEN}@huggingface.co/spaces/heisenberg-walterwhite/musicbot main --force
+          git remote add space https://Anandhaprasad18:${HF_TOKEN}@huggingface.co/spaces/Anandhaprasad18/MoodTuneBot
+          git push --force space main  # ✅ Use your actual space path
