@@ -1,3 +1,11 @@
+let sessionId = localStorage.getItem("session_id");
+
+// Create a session ID if not exists
+if (!sessionId) {
+  sessionId = "session_" + Date.now() + "_" + Math.floor(Math.random() * 10000);
+  localStorage.setItem("session_id", sessionId);
+}
+
 function appendMessage(sender, text, isLink = false) {
   const chatBox = document.getElementById("chat-box");
   const message = document.createElement("div");
@@ -21,56 +29,62 @@ function removeTypingIndicator(typingElement) {
   if (typingElement) typingElement.remove();
 }
 
-function sendMessage() {
+async function sendMessage() {
   const input = document.getElementById("user-input");
   const message = input.value.trim();
   if (!message) return;
 
   appendMessage("You", message);
   input.value = "";
-  
+
   const typingElement = showTypingIndicator();
 
-  fetch("/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message })
-  })
-  .then(res => res.json())
-  .then(data => {
+  try {
+    const res = await fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: message,
+        session: sessionId   // 👈 send the same session id every time
+      }),
+    });
+
+    const data = await res.json();
     removeTypingIndicator(typingElement);
-    appendMessage("Bot", data.response);
+
+    if (data.response) appendMessage("Bot", data.response);
     if (data.link) {
       appendMessage("Bot", `<a href="${data.link}" target="_blank">🎵 Play on Spotify</a>`, true);
     }
-  })
-  .catch(err => {
+  } catch (err) {
     removeTypingIndicator(typingElement);
     appendMessage("Bot", "Oops! Something went wrong. Please try again.");
     console.error(err);
-  });
+  }
 }
 
-// Handle Enter keypress (without Shift)
+// Handle Enter key
 document.getElementById("user-input").addEventListener("keypress", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
-    e.preventDefault(); // Prevent adding a newline
+    e.preventDefault();
     sendMessage();
   }
 });
 
-// Add touch support for the send button
-document.querySelector("button").addEventListener("touchstart", (e) => {
-  e.preventDefault(); // Prevent default touch behavior (e.g., zooming)
+// Send button (click + touch)
+const sendBtn = document.querySelector("button");
+sendBtn.addEventListener("click", sendMessage);
+sendBtn.addEventListener("touchstart", (e) => {
+  e.preventDefault();
   sendMessage();
 });
 
-// Create particles for impressive graphics
+// Particle background
 function createParticles() {
-  const particlesContainer = document.querySelector('.particles');
+  const particlesContainer = document.querySelector(".particles");
   for (let i = 0; i < 20; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
+    const particle = document.createElement("div");
+    particle.className = "particle";
     particle.style.width = `${Math.random() * 10 + 5}px`;
     particle.style.height = particle.style.width;
     particle.style.left = `${Math.random() * 100}%`;
