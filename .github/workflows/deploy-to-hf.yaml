@@ -1,0 +1,25 @@
+name: Push to HF Space
+
+on:
+  push:
+    branches: [ main ]   # Runs whenever you push to main
+
+jobs:
+  push-space:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+
+          # Add remote if not exists
+          git remote add hf https://huggingface.co/spaces/heisenberg-walterwhite/musicbot || true
+
+          # Force push main branch to HF Space
+          git push https://__token__:${HF_TOKEN}@huggingface.co/spaces/heisenberg-walterwhite/musicbot main --force
